@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Triplets Comparison</title>
+</head>
+<body>
+        Problem: <br/><br/>
+        <div>
+        <span><b>Sample Input</b></span>
+
+        <div>
+                17 28 30 - Alice points <br/>
+                99 16 8 - Bob Points
+        </div>
+        
+        
+        <div><br/>
+                <b>Sample Output </b><br/>
+        
+                2 1
+        </div><br/>
+        
+        
+        <div><b>Explanation</b> <br/><br/>
+        
+        Comparing the 0th elements, 17 < 99 so Bob receives a point. <br/>
+        Comparing the 1st and 2nd elements, 28 > 16 and 30 > 8, so Alice receives two points.<br/>
+        The return array is [2,1].
+        </div>
+        </div><br/><br/>
+
+        Solution: Please check console..
+    <script>
+        let a = [17, 28, 30, 99], b = [99, 16, 8, 4];
+        let alice = 0, bob = 0;
+
+        function triplet() {
+            for(i=0;i<a.length;i++) {
+                if(a[i] > b[i]) {
+                    alice++;
+                } else if(a[i] < b[i]) {
+                    bob++;
+                } 
+            }
+
+            return [alice,bob];
+        }
+
+        let output = triplet();
+        console.log(output);
+    </script>
+</body>
+</html>
